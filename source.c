@@ -8,11 +8,12 @@
 #define BUFFER_SIZE 512
 #define SCREEN_WIDTH 800
 #define SCREEN_HEIGHT 400
+#define GRID_SPACING 50
 
 float audioBuffer[BUFFER_SIZE];
 int bufferIndex = 0;
 
-// PortAudio callback function
+// callback function
 static int audioCallback(const void *inputBuffer, void *outputBuffer,
                          unsigned long framesPerBuffer,
                          const PaStreamCallbackTimeInfo *timeInfo,
@@ -54,7 +55,14 @@ int main() {
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         SDL_RenderClear(renderer);
         
-        // Draw waveform
+        SDL_SetRenderDrawColor(renderer, 0, 100, 0, 255);
+        for (int x = 0; x < SCREEN_WIDTH; x += GRID_SPACING) {
+            SDL_RenderDrawLine(renderer, x, 0, x, SCREEN_HEIGHT);
+        }
+        for (int y = 0; y < SCREEN_HEIGHT; y += GRID_SPACING) {
+            SDL_RenderDrawLine(renderer, 0, y, SCREEN_WIDTH, y);
+        }
+        
         SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
         for (int i = 1; i < BUFFER_SIZE; i++) {
             int x1 = (i - 1) * SCREEN_WIDTH / BUFFER_SIZE;
@@ -63,6 +71,15 @@ int main() {
             int y2 = (SCREEN_HEIGHT / 2) + (int)(audioBuffer[i] * (SCREEN_HEIGHT / 2));
             SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
         }
+        
+        SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
+        SDL_Surface *surface = SDL_CreateRGBSurfaceWithFormat(0, SCREEN_WIDTH, SCREEN_HEIGHT, 32, SDL_PIXELFORMAT_RGBA32);
+        SDL_FillRect(surface, NULL, SDL_MapRGBA(surface->format, 0, 0, 0, 0));
+        SDL_Texture *texture = SDL_CreateTextureFromSurface(renderer, surface);
+        SDL_FreeSurface(surface);
+        SDL_Rect textRect = {10, SCREEN_HEIGHT - 20, 100, 20};
+        SDL_RenderCopy(renderer, texture, NULL, &textRect);
+        SDL_DestroyTexture(texture);
         
         SDL_RenderPresent(renderer);
         SDL_Delay(16);  // ~60 FPS
