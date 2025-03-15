@@ -53,7 +53,7 @@ Fedora
 
 After installation, compile and run the program with:
 ```
-gcc visify.c -o visify -lportaudio -lSDL2 -lm
+gcc source.c -o visify -lportaudio -lSDL2 -lm
 ```
 ```bash
 ./visify
