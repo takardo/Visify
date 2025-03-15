@@ -51,8 +51,10 @@ Fedora
   ```
 ## Usage
 
-After installation, run the program with:
-
+After installation, compile and run the program with:
+```
+gcc visify.c -o visify -lportaudio -lSDL2 -lm
+```
 ```bash
 ./visify
 ```
