@@ -16,7 +16,8 @@ Visify is a real-time audio oscilloscope written in C that visualizes live audio
 | Debian           | ✅ Supported    |
 | Ubuntu           | ✅ Supported    |
 | Arch Linux       | ✅ Supported    |
-| Windows          | 🚧 Coming soon |
+| Open Suse        | ✅ Supported    |
+| Windows          | 🚧 Coming soon  |
 
 ## Installation
 
@@ -48,6 +49,10 @@ Fedora
   ```
   ```
   sudo apt install -y libportaudio2 libportaudiocpp0 portaudio19-dev libsdl2-dev gcc make
+  ```
+  Open Suse
+  ```
+  sudo zypper in libportaudio2, portaudio-devel, sdl2-compat-devel gcc make
   ```
 ## Usage
 
