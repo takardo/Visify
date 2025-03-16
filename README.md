@@ -6,16 +6,17 @@ Visify is a real-time audio oscilloscope written in C that visualizes live audio
 
 - Captures audio input in real-time using **PortAudio**.
 - Displays a waveform using **SDL2**.
-- Supports **Fedora**, **Ubuntu**, and **Arch Linux** (Windows version coming soon!).
+- Supports **Fedora**, **Ubuntu**, **OpenSuse** and **Arch Linux** (Windows version coming soon!).
 
 ## Compatibility
 
 | Operating System | Status         |
 | ---------------- | -------------- |
-| Fedora           | ✅ Supported    |
-| Debian           | ✅ Supported    |
-| Ubuntu           | ✅ Supported    |
-| Arch Linux       | ✅ Supported    |
+| Fedora           | ✅ Supported   |
+| Debian           | ✅ Supported   |
+| Ubuntu           | ✅ Supported   |
+| Arch Linux       | ✅ Supported   |
+| Open Suse        | ✅ Supported   |
 | Windows          | 🚧 Coming soon |
 
 ## Installation
@@ -48,6 +49,10 @@ Fedora
   ```
   ```
   sudo apt install -y libportaudio2 libportaudiocpp0 portaudio19-dev libsdl2-dev gcc make
+  ```
+  Open Suse
+  ```
+  sudo zypper in libportaudio2 portaudio-devel sdl2-compat-devel gcc make
   ```
 ## Usage
 
