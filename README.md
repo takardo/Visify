@@ -6,7 +6,7 @@ Visify is a real-time audio oscilloscope written in C that visualizes live audio
 
 - Captures audio input in real-time using **PortAudio**.
 - Displays a waveform using **SDL2**.
-- Supports **Fedora**, **Ubuntu**, and **Arch Linux** (Windows version coming soon!).
+- Supports **Fedora**, **Ubuntu**, **OpenSuse** and **Arch Linux** (Windows version coming soon!).
 
 ## Compatibility
 
