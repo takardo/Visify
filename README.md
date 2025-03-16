@@ -52,7 +52,7 @@ Fedora
   ```
   Open Suse
   ```
-  sudo zypper in libportaudio2, portaudio-devel, sdl2-compat-devel gcc make
+  sudo zypper in libportaudio2 portaudio-devel sdl2-compat-devel gcc make
   ```
 ## Usage
 
