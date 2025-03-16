@@ -12,12 +12,12 @@ Visify is a real-time audio oscilloscope written in C that visualizes live audio
 
 | Operating System | Status         |
 | ---------------- | -------------- |
-| Fedora           | ✅ Supported    |
-| Debian           | ✅ Supported    |
-| Ubuntu           | ✅ Supported    |
-| Arch Linux       | ✅ Supported    |
-| Open Suse        | ✅ Supported    |
-| Windows          | 🚧 Coming soon  |
+| Fedora           | ✅ Supported   |
+| Debian           | ✅ Supported   |
+| Ubuntu           | ✅ Supported   |
+| Arch Linux       | ✅ Supported   |
+| Open Suse        | ✅ Supported   |
+| Windows          | 🚧 Coming soon |
 
 ## Installation
 
