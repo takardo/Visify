@@ -60,12 +60,13 @@ Fedora
   ```
 ## Usage
 
-After installation, compile and run the program with:
-```
-gcc source.c -o visify -lportaudio -lSDL2 -lm
-```
+After installation, run the program with:
 ```bash
 ./visify
+```
+If you did not use the install script, do this:
+```
+gcc source.c -o visify -lportaudio -lSDL2 -lm
 ```
 
 ## Contributing
