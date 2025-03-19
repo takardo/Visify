@@ -1,6 +1,6 @@
 # Visify - Real-Time Audio Oscilloscope
 
-Visify is a real-time audio oscilloscope written in C that visualizes live audio input as a waveform.
+Visify is a real-time audio oscilloscope written in C that visualises live audio input as a waveform.
 
 ## Features
 
