@@ -20,7 +20,11 @@ Visify is a real-time audio oscilloscope written in C that visualizes live audio
 | Windows          | 🚧 Coming soon |
 
 ## Installation
-
+Run the install script:
+```bash
+bash install.sh
+```
+OR
 1. Clone the repository:
 
    ```bash
