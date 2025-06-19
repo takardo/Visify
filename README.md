@@ -54,7 +54,7 @@ Fedora
   ```
   sudo apt install -y libportaudio2 libportaudiocpp0 portaudio19-dev libsdl2-dev gcc make
   ```
-  Open Suse
+  openSUSE Tumbleweed
   ```
   sudo zypper in libportaudio2 portaudio-devel sdl2-compat-devel gcc make
   ```
