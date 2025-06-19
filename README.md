@@ -56,6 +56,9 @@ Fedora
   ```
   openSUSE Tumbleweed
   ```
+  sudo zypper ref && sudo zypper dup
+  ```
+  ```
   sudo zypper in libportaudio2 portaudio-devel sdl2-compat-devel gcc make
   ```
 ## Usage
