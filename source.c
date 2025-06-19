@@ -42,7 +42,6 @@ static int audioCallback(const void *inputBuffer, void *outputBuffer,
                              }
                              SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
-
                              Pa_Initialize();
                              PaStream *stream;
                              Pa_OpenDefaultStream(&stream, 1, 0, paFloat32, SAMPLE_RATE, BUFFER_SIZE, audioCallback, NULL);
@@ -50,12 +49,26 @@ static int audioCallback(const void *inputBuffer, void *outputBuffer,
 
                              int running = 1;
                              SDL_Event event;
-                             float gain = 10.0f;  // gain multiplier to amplify waveform visually
+                             float gain = 7.0f;  // gain multiplier to amplify waveform visually
 
                              while (running) {
                                  while (SDL_PollEvent(&event)) {
                                      if (event.type == SDL_QUIT) {
                                          running = 0;
+                                     } else if (event.type == SDL_MOUSEWHEEL) {
+                                         if (event.wheel.y > 0) {
+                                             gain += 1.0f;
+                                         } else if (event.wheel.y < 0) {
+                                             gain -= 1.0f;
+                                             if (gain < 1.0f) gain = 1.0f;
+                                         }
+                                     } else if (event.type == SDL_KEYDOWN) {
+                                         if (event.key.keysym.sym == SDLK_UP) {
+                                             gain += 1.0f;
+                                         } else if (event.key.keysym.sym == SDLK_DOWN) {
+                                             gain -= 1.0f;
+                                             if (gain < 1.0f) gain = 1.0f;
+                                         }
                                      }
                                  }
 
