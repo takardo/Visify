@@ -1,12 +1,3 @@
-> **Note**  
-> This is a fork of [syszelj9/Visify](https://github.com/syszelj9/Visify) with the following changes:
->
-> - Added ability to change gain amplification with mouse scroll or arrow keys. Increase/Decrease by 1.0.
-> - Vsync added.
-> - Window is now resizable.
-> - Updated README for openSUSE Tumbleweed.
-
-
 # Visify - Real-Time Audio Oscilloscope
 
 Visify is a real-time audio oscilloscope written in C that visualises live audio input as a waveform.
