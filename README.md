@@ -4,7 +4,7 @@
 > - Added ability to change gain amplification with mouse scroll or arrow keys. Increase/Decrease by 1.0.
 > - Vsync added.
 > - Window is now resizable.
-> - Updated README for openSUSE.
+> - Updated README for openSUSE Tumbleweed.
 
 
 # Visify - Real-Time Audio Oscilloscope
