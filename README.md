@@ -27,7 +27,6 @@ Visify is a real-time audio oscilloscope written in C that visualises live audio
 | Ubuntu           | ✅ Supported   |
 | Arch Linux       | ✅ Supported   |
 | Open Suse        | ✅ Supported   |
-| Windows          | 🚧 Coming soon |
 
 ## Installation
 Run the install script:
